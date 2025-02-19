@@ -1,6 +1,6 @@
 <div class="review-pagination">
   {%- if pagination.page.previous %}
-    <a class="button outline review-pagination__previous" href="{{ pagination.href.previous }}">Newer</a>
+    <a class="button outline review-pagination__previous" href="{{ pagination.href.previous }}"><span>Newer</span></a>
   {%- endif %}
   <span>
     {%- for page in pagination.pages %}
@@ -14,6 +14,6 @@
     {{ pagination.json }}
   </span>
   {%- if pagination.page.next %}
-    <a class="button outline review-pagination__next" href="{{ pagination.href.next }}">Older</a>
+    <a class="button outline review-pagination__next" href="{{ pagination.href.next }}"><span>Older</span></a>
   {%- endif %}
 </div>
