@@ -1,0 +1,10 @@
+{
+  "items": [
+    "all", 
+    "reviews", 
+    "reviewsByTitle",
+    "reviewsByAuthor",
+    "genres",
+    "latestReview"
+  ]
+}

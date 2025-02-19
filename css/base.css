@@ -1,0 +1,99 @@
+:root {
+  --primary: #BB3880;
+  --primary-dark: #824670;
+  --primary-shade: #4C2340;
+  --secondary: #EC7357;
+  --secondary-tint: #f89770;
+  --tertiary: #e4f3f6;
+  --tertiary-tint: #f2fdff;
+  --tertiary-shade: #c3d2d5;
+  --quaternary: #85f4dc;
+  --quaternary-tint: #c1f7dc;
+  --quintenary: #6f7c12;
+  --quintenary-tint: #8a9918;
+  --primary-gradient: linear-gradient(90deg, var(--primary-dark) 0%, var(--primary) 100%);
+  --quaternary-gradient: linear-gradient(34deg, var(--quaternary) 5.75%, var(--quaternary-tint) 98.95%);
+  --lightest-gray: #eee;
+  --light-gray: #d3d3d3;
+  --dark: #303030;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Merriweather", serif;
+  color: var(--dark);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+p {
+  line-height: 2em;
+}
+
+h2 {
+  color: var(--primary-shade);
+  font-size: 3rem;
+}
+
+h3 {
+  color: var(--primary);
+  font-size: 1.5rem;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.stack > * + * {
+  margin-top: 1.85rem;
+}
+
+.stack-small > * + * {
+  margin-top: 1.25rem;
+}
+
+.wrapper > ul {
+  padding-left: 20px;
+}
+
+.wrapper > ul > li + li {
+  margin-top: 0.875rem;
+}
+
+.wrapper {
+  max-width: 1260px;
+  margin-inline: auto;
+  padding: 80px 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+section:nth-of-type(2n) {
+  background-color: var(--tertiary);
+}
+
+.page-title {
+  background: var(--quaternary-gradient);
+}
+
+.page-title .wrapper {
+  padding-block: 60px;
+}
+
+.page-title h1 {
+  color: var(--primary-shade);
+  font-size: 3rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+  main {
+    padding-top: 60px;
+  }
+}

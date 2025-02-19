@@ -1,0 +1,59 @@
+{% if page.url == "/" %}
+  {% set latestReview = collections.latestReview %}
+  {% set bookTitle = latestReview.data.title %}
+  {% set bookAuthor = latestReview.data.author %}
+  {% set bookTags = latestReview.data.tags %}
+  {% if latestReview.data.excerpt %}
+    {% set bookExcerpt = latestReview.data.excerpt %}
+  {% else %}
+    {% set bookExcerpt = "" %}
+  {% endif %}
+  {% set bookDate = "Latest review" %}
+{% else %}
+  {% set bookTitle = title %}
+  {% set bookAuthor = author %}
+  {% set bookTags = tags %}
+  {% if excerpt %}
+    {% set bookExcerpt = excerpt %}
+  {% else %}
+    {% set bookExcerpt = "" %}
+  {% endif %}
+  {% set bookDate = page.date.toLocaleString(undefined, {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric' 
+    }) 
+  %}
+{% endif %}
+
+<section class="book-header">
+  <div class="wrapper">
+    <img class="book-header__cover" src="/images/covers/{{ bookTitle | slug }}.jpg">
+    <div class="book-header__info">
+
+      <div class="book-header__top stack-small">
+        <span class="date">{{ bookDate }}</span>
+        <h2>{{ bookTitle }}</h2>
+        <span class="author">{{ bookAuthor }}</span>
+        <ul>
+          {% for tag in bookTags %}
+            <li><a href="/genres/{{ tag | slug }}">{{ tag }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="book-header__bottom stack-small">
+        <p>{{ bookExcerpt | safe }}</p>
+        {% if page.url == "/" %}
+          <a class="button" href="/reviews/{{ bookTitle | slug }}">Read review</a>
+        {% endif %}
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- Book cover background -->
+  <div class="book-header__background">
+    <img src="/images/covers/{{ bookTitle | slug }}.jpg">
+  </div>
+</section>

@@ -1,0 +1,23 @@
+{% set sortedGenres = collections | filteredCollections(excludes.items) %}
+{% set genreCounter = 0 %}
+
+{% if showAllGenres %}
+  {% set genreLimit = sortedGenres | length %}
+  {% set displayedGenres = sortedGenres %}
+{% else %}
+  {% set genreLimit = 4 %}
+  {% set displayedGenres = sortedGenres | shuffle %}
+{% endif %}
+
+<ul class="genre-list">
+  {%- for genre in displayedGenres %}
+    {%- if genreCounter < genreLimit %}
+      <li>
+        {%- set genreCovers = collections[genre] | shuffle %}
+        <img src="/images/covers/{{ genreCovers[0].data.title | slug }}.jpg">
+        <a href="/genres/{{ genre | slugify }}">{{ genre }} ({{ collections[genre] | length }})</a>
+      </li>
+      {%- set genreCounter = genreCounter + 1 %}
+    {%- endif %}
+  {%- endfor %}
+</ul>

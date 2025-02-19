@@ -1,0 +1,11 @@
+{% extends "layout.njk" %}
+{% set thisBook = page %}
+
+{% block content %}
+  {% include "blocks/book-header.njk" %}
+
+  <div class="review-text stack-small">
+    {{ content | safe }}
+    <p class="review-text__logo"><img src="/images/logo-primary.svg"></p>
+  </div>
+{% endblock %}

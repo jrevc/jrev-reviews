@@ -1,0 +1,24 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+  {% include "blocks/book-header.njk" %}
+  {% include "blocks/message-box.njk" %}
+
+  <section>
+    <div class="wrapper stack">
+      <h3>Latest reviews</h3>
+      <div class="review-list">
+        {% set reviewCount = 6 %}
+        {% set reviewCounter = 0 %}
+        {%- for review in collections.reviews -%}
+          {% if reviewCounter < reviewCount %}
+            {% include "blocks/book-entry.njk" %}
+            {% set reviewCounter = reviewCounter + 1 %}
+          {% endif %}
+        {%- endfor -%}
+      </div>
+      <a class="button" href="/reviews/">View all reviews</a>
+    </div>
+  </section>
+
+{% endblock %}

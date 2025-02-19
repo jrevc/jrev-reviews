@@ -1,0 +1,42 @@
+#message-box .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+
+  padding: 4em;
+  border-radius: 8px;
+  background: var(--primary-gradient);
+}
+
+#message-box h2 {
+  color: white;
+  font-weight: 600;
+  text-align: center;
+}
+
+#message-box h3,
+#message-box p {
+  color: var(--tertiary);
+  font-weight: 400;
+  text-align: center;
+}
+
+#message-box p {
+  font-size: 1.25rem;
+}
+
+@media screen and (max-width: 750px) {
+  #message-box .box {
+    padding: 20px 15px;
+    gap: 30px;
+  }
+
+  #message-box h2 {
+    font-size: 2rem;
+  }
+
+  #message-box p {
+    font-size: 0.875rem;
+  }
+}

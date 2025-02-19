@@ -1,0 +1,174 @@
+footer {
+  /* padding-block: 80px; */
+  background-color: var(--secondary);
+  color: white;
+}
+
+footer .wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+footer h5 {
+  font-size: 1.25em;
+  font-weight: 400;
+  padding-inline-start: 10px;
+  margin-block-end: 20px;
+}
+
+.footer__brand {
+  width: 300px;
+  border-right: 1px solid white;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__brand a {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+}
+
+.footer__brand img {
+  width: 120px;
+}
+
+.footer__brand p {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.footer__brand ul {
+  list-style: none;
+  margin-top: 30px;
+}
+
+.footer__brand li {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
+
+
+.footer__links {
+  width: 300px;
+  border-left: 1px solid white;
+  padding-left: 30px;
+}
+
+.footer__reviews {
+  flex-grow: 1;
+  padding-inline: 30px;
+}
+
+.footer__reviews ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style: none;
+}
+
+.footer__reviews li a {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+}
+
+.footer__reviews li:nth-of-type(2n - 1) a {
+  background: rgba(255, 255, 255, 0.10);
+}
+
+.footer__reviews li a:hover {
+  background: rgba(255, 255, 255, 0.20);
+}
+
+.footer__reviews-title {
+  font-weight: 400;
+  font-size: 0.875rem;
+}
+
+.footer__reviews-author {
+  font-family: "Lato", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 3.5px;
+}
+
+.footer__links nav {
+  height: 100%;
+}
+
+.footer__links nav ul {
+  height: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.footer__links nav a {
+  text-decoration: none;
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-size: 0.875rem;
+  line-height: normal;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.footer__links nav a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 900px) {
+  footer .wrapper {
+    flex-direction: column-reverse;
+    align-items: stretch;
+    gap: 30px;
+  }
+
+  footer h5 {
+    text-align: center;
+  }
+
+  .footer__brand {
+    width: auto;
+    padding-right: 0;
+    border-right: none;
+    padding-top: 30px;
+    border-top: 1px solid white;
+  }
+
+  .footer__reviews {
+    flex-grow: 1;
+    padding-inline: 0;
+  }
+
+  .footer__reviews li a {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .footer__links {
+    width: 100%;
+    padding-left: 0;
+    border-left: none;
+    padding-bottom: 30px;
+    border-bottom: 1px solid white;
+  }
+
+  .footer__links nav ul {
+    align-items: center;
+  }
+}

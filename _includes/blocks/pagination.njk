@@ -1,0 +1,19 @@
+<div class="review-pagination">
+  {%- if pagination.page.previous %}
+    <a class="button outline review-pagination__previous" href="{{ pagination.href.previous }}">Newer</a>
+  {%- endif %}
+  <span>
+    {%- for page in pagination.pages %}
+      <a
+        href="{{ pagination.hrefs[loop.index0] }}"
+        class="{% if pagination.pageNumber == loop.index0 %}active{% endif %}"
+      >
+        {{ loop.index }}
+      </a>
+    {%- endfor %}
+    {{ pagination.json }}
+  </span>
+  {%- if pagination.page.next %}
+    <a class="button outline review-pagination__next" href="{{ pagination.href.next }}">Older</a>
+  {%- endif %}
+</div>

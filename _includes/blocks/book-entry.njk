@@ -1,0 +1,13 @@
+<a class="book-entry" href="{{ review.url }}">
+  <div class="book-entry__cover">
+    <img src="/images/covers/{{ review.data.title | slug }}.jpg">
+  </div>
+  <div class="book-entry__text">
+    <div class="book-entry__title">
+      {{ review.data.title }}
+    </div>
+    <div class="book-entry__author">
+      {{ review.data.author }}
+    </div>
+  </div>
+</a>

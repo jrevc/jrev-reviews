@@ -1,0 +1,23 @@
+.featured-genres__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 30px;
+}
+
+.featured-genres__container p {
+  font-size: 1.25rem;
+  color: var(--dark);
+}
+
+.featured-genres__container .featured-genres__statement {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.15em;
+  color: var(--primary-shade);
+}
+
+@media screen and (max-width: 500px) {
+  .featured-genres__container {
+    grid-template-columns: 1fr !important;
+  }
+}

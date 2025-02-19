@@ -1,0 +1,22 @@
+{% include "layout_head.njk" %}
+<body>
+  {% include "blocks/header.njk" %}
+  <main>
+    {% block content %}
+    <div class="page-title">
+      <div class="wrapper">
+        <h1>{{ title }}</h1>
+      </div>
+    </div>
+    <section>
+      <div class="wrapper stack">
+        {{ content | safe }}
+      </div>
+    </section>
+    {% endblock %}
+
+    {% if hideGenres != true %}
+      {% include "blocks/featured-genres.njk" %}
+    {% endif %}
+  </main>
+{% include "layout_footer.njk" %}
