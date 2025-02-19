@@ -15,7 +15,7 @@ hideGenres: true
 ---
 ### Tagged "{{ genre }}"
 <div class="review-list">
-  {%- for review in collections[genre] %}
+  {%- for review in collections[genre] | sort(attribute="data.title") %}
     {% include "blocks/book-entry.njk" %}
   {%- endfor %}
 </div>

@@ -58,6 +58,16 @@ main {
   margin-top: 1.25rem;
 }
 
+.stack > * + p,
+.stack > * + ul,
+.stack > * + ol {
+  margin-top: 0.75em;
+}
+
+.stack-small > * + h3 {
+  margin-top: 1.5em;
+}
+
 .wrapper > ul {
   padding-left: 20px;
 }
