@@ -3,7 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ title }} | jRev Reviews</title>
+  {% if title == "Home" %}
+    {% set displayTitle = "jRev Reviews" %}
+  {% else %}
+    {% set displayTitle = title + " | jRev Reviews" %}
+  {% endif %}
+  <title>{{ displayTitle }}</title>
+  <meta name="description" content="A collection of book reviews written by Jed R. Cruz">
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://books.jrevita.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ displayTitle }}">
+  <meta property="og:description" content="A collection of book reviews written by Jed R. Cruz">
+  <meta property="og:image" content="">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="books.jrevita.com">
+  <meta property="twitter:url" content="https://books.jrevita.com/">
+  <meta name="twitter:title" content="{{ displayTitle }}">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="">
 
   <!-- Lineicons CDN -->
   <link href="https://cdn.lineicons.com/5.0/lineicons.css" rel="stylesheet">
