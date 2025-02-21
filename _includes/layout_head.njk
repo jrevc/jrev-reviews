@@ -8,12 +8,13 @@
     {% set metaTitle = displayTitle %}
   {% else %}
     {% set displayTitle = title + " | jRev Reviews" %}
-    {% set metaTitle = title + " by " + author %}
+    {% set metaTitle = title %}
   {% endif %}
   <title>{{ displayTitle }}</title>
 
   {% set metaUrl = page.url %}
   {% if isReview %}
+    {% set metaTitle = title + " by " + author %}
     {% set metaType = "article" %}
     {% set metaImage = "/images/covers/" + title | slug + ".jpg" %}
   {% else %}
