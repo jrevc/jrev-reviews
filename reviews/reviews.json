@@ -1,4 +1,5 @@
 {
   "layout": "review.njk",
-  "permalink": "/reviews/{{ title | slug }}/index.html"
+  "permalink": "/reviews/{{ title | slug }}/index.html",
+  "isReview": true
 }

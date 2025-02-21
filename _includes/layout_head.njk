@@ -5,26 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {% if title == "Home" %}
     {% set displayTitle = "jRev Reviews" %}
+    {% set metaTitle = displayTitle %}
   {% else %}
     {% set displayTitle = title + " | jRev Reviews" %}
+    {% set metaTitle = title + " by " + author %}
   {% endif %}
   <title>{{ displayTitle }}</title>
-  <meta name="description" content="A collection of book reviews written by Jed R. Cruz">
+
+  {% set metaUrl = page.url %}
+  {% if isReview %}
+    {% set metaType = "article" %}
+    {% set metaImage = "/images/covers/" + title | slug + ".jpg" %}
+  {% else %}
+    {% set metaType = "website" %}
+    {% set metaImage = "/images/og-image.jpg" %}
+  {% endif %}
+  {% set metaDescription = excerpt or 'Book reviews written by Jed R. Cruz' %}
+
+
+  <meta name="description" content="{{ metaDescription }}">
 
   <!-- Facebook Meta Tags -->
-  <meta property="og:url" content="https://books.jrevita.com/">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="{{ displayTitle }}">
-  <meta property="og:description" content="A collection of book reviews written by Jed R. Cruz">
-  <meta property="og:image" content="">
+  <meta property="og:url" content="https://books.jrevita.com{{ metaUrl }}">
+  <meta property="og:type" content="{{ metaType }}">
+  <meta property="og:title" content="{{ metaTitle }}">
+  <meta property="og:description" content="{{ metaDescription }}">
+  <meta property="og:image" content="{{ metaImage }}">
 
   <!-- Twitter Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
   <meta property="twitter:domain" content="books.jrevita.com">
-  <meta property="twitter:url" content="https://books.jrevita.com/">
-  <meta name="twitter:title" content="{{ displayTitle }}">
-  <meta name="twitter:description" content="">
-  <meta name="twitter:image" content="">
+  <meta property="twitter:url" content="https://books.jrevita.com{{ metaUrl }}">
+  <meta name="twitter:title" content="{{ metaTitle }}">
+  <meta name="twitter:description" content="{{ metaDescription }}">
+  <meta name="twitter:image" content="{{ metaImage }}">
 
   <!-- Lineicons CDN -->
   <link href="https://cdn.lineicons.com/5.0/lineicons.css" rel="stylesheet">
