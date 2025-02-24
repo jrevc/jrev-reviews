@@ -9,6 +9,10 @@ footer .wrapper {
   flex-direction: row;
 }
 
+footer picture {
+  height: auto;
+}
+
 footer h5 {
   font-size: 1.25em;
   font-weight: 400;
@@ -24,6 +28,7 @@ footer h5 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 20px;
 }
 
 .footer__brand a {
@@ -48,7 +53,6 @@ footer h5 {
 
 .footer__brand ul {
   list-style: none;
-  margin-top: 30px;
 }
 
 .footer__brand li {
@@ -56,6 +60,14 @@ footer h5 {
   line-height: 1.5rem;
 }
 
+.footer__version p {
+  text-align: center;
+  text-transform: none;
+  letter-spacing: 0;
+  font-family: "Lato", sans-serif;
+  font-size: 0.875em;
+  opacity: 0.5;
+}
 
 .footer__links {
   width: 300px;
