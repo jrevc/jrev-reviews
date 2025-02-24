@@ -1,6 +1,10 @@
 <a class="book-entry" href="{{ review.url }}">
   <div class="book-entry__cover">
-    <img src="/images/covers/{{ review.data.title | slug }}.jpg">
+    <img 
+      src="/images/covers/{{ review.data.title | slug }}.jpg" 
+      sizes="170px"
+      alt="{{ review.data.title }} cover"
+    >
   </div>
   <div class="book-entry__text">
     <div class="book-entry__title">

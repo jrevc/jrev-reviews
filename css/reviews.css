@@ -64,7 +64,9 @@
 }
 
 .review-text__logo img {
+  display: inline;
   width: 50px;
+  height: auto;
 }
 
 @media screen and (max-width: 750px) {

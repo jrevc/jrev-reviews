@@ -32,6 +32,11 @@ body {
   min-height: 100vh;
 }
 
+picture,
+img {
+  display: block;
+}
+
 p {
   line-height: 2em;
 }

@@ -1,6 +1,22 @@
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img"
+
 export default function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("css")
   eleventyConfig.addPassthroughCopy("images")
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+    outputDir: "./_site/img/",
+    urlPath: "/img/",
+    widths: [
+      430,
+      170
+    ],
+    htmlOptions: {
+      imgAttributes: {
+        loading: "lazy",
+        decoding: "async"
+      }
+    }
+  })
 
   // Randomize filter
   eleventyConfig.addFilter("shuffle", (array) => {

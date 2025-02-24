@@ -12,6 +12,7 @@ header .wrapper {
 
 .header__logo img {
   width: 56px;
+  height: auto;
 }
 
 .header__logo a {

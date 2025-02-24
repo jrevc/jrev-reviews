@@ -34,6 +34,7 @@ footer h5 {
 
 .footer__brand img {
   width: 120px;
+  height: auto;
 }
 
 .footer__brand p {

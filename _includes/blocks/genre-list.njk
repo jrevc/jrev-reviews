@@ -14,7 +14,7 @@
     {%- if genreCounter < genreLimit %}
       <li>
         {%- set genreCovers = collections[genre] | shuffle %}
-        <img src="/images/covers/{{ genreCovers[0].data.title | slug }}.jpg">
+        <img src="/images/covers/{{ genreCovers[0].data.title | slug }}.jpg" alt="">
         <a href="/genres/{{ genre | slugify }}">{{ genre }} ({{ collections[genre] | length }})</a>
       </li>
       {%- set genreCounter = genreCounter + 1 %}
