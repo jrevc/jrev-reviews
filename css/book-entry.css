@@ -13,7 +13,7 @@
   outline: 1px solid var(--light-gray);
 }
 
-.book-entry * + * {
+.book-entry *:not(source) + * {
   margin-top: 6px;
 }
 
