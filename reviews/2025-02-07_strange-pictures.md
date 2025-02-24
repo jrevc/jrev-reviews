@@ -3,7 +3,7 @@ title: 'Strange Pictures'
 author: 'Uketsu'
 authorLast: 'Uketsu'
 tags: ['Mystery', 'Weird Fiction', 'Horror', 'Asia']
-excerpt: 'Much like the simple drawings that each chapter is structured around, there is the suggestion of a deeper and darker terror in what’s being suggested but not outright told.'
+excerpt: 'Much like the simple drawings that each chapter is structured around, the text holds the suggestion of a deeper and darker terror in what’s not outright told.'
 ---
 
 Above all other things, *Strange Pictures* is a story that highlights the importance of perspective. Reading it is like viewing a sprawling, elaborate murder-diorama, but with a zoomed-in point of view that only allows for a few things at a time to be visible.
@@ -14,7 +14,7 @@ The class sets the tone for the rest of the novel. Each of the book’s three ch
 
 Each drawing gradually expands our perspective, revealing unexpected connections. It’s a unique way of delivering a story. Assumptions are introduced, inverted, and shattered. Seemingly unimportant people and events take on a whole new significance once their role within the diorama is made clear.
 
-Author Uketsu&mdash;by all accounts a mysterious figure himself&mdash;has a knack for the quiet and eerie. Each scene and each event is described in sparse and simple language. It’s in the negative space where the horror resides. Much like the simple drawings that each chapter is structured around, there is the suggestion of a deeper and darker terror in what’s being suggested but not outright told.
+Author Uketsu&mdash;by all accounts a mysterious figure himself&mdash;has a knack for the quiet and eerie. Each scene and each event is described in sparse and simple language. It’s in the negative space where the horror resides. Much like the simple drawings that each chapter is structured around, the text holds the suggestion of a deeper and darker terror in what’s not outright told.
 
 When the terrible things finally happen, they almost feel welcome. In its most horrifying moments, Uketsu fulfills the promises that *Strange Pictures* initially makes: that violence and tragedy are lurking in the unseen spaces of his minimal prose. Each incident is a release and a further step back from the diorama, until all is made clear at the very end.
 
