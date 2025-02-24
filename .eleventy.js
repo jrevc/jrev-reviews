@@ -1,8 +1,11 @@
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img"
+import htmlminifier from "html-minifier-terser"
 
 export default function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("css")
   eleventyConfig.addPassthroughCopy("images")
+
+  // Optimize images
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
     outputDir: "./_site/img/",
     urlPath: "/img/",
@@ -16,6 +19,21 @@ export default function(eleventyConfig) {
         decoding: "async"
       }
     }
+  })
+
+  // Minify HTML
+  eleventyConfig.addTransform("htmlminifier", async (content, outputPath) => {
+    if (outputPath && outputPath.endsWith(".html")) {
+      let minified = htmlminifier.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true,
+      })
+
+      return minified
+    }
+
+    return content
   })
 
   // Randomize filter
