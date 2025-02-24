@@ -28,8 +28,14 @@
 
 <section class="book-header">
   <div class="wrapper">
-    <img class="book-header__cover" src="/images/covers/{{ bookTitle | slug }}.jpg" alt="{{ bookTitle }} cover">
-    <div class="book-header__info">
+    {% if page.url == "/" %}
+      <a href="/reviews/{{ bookTitle | slug }}#book-header__info">
+        <img class="book-header__cover" src="/images/covers/{{ bookTitle | slug }}.jpg" alt="{{ bookTitle }} cover">
+      </a>
+    {% else %}
+      <img class="book-header__cover" src="/images/covers/{{ bookTitle | slug }}.jpg" alt="{{ bookTitle }} cover">
+    {% endif %}
+    <div id="book-header__info" class="book-header__info">
 
       <div class="book-header__top stack-small">
         <span class="date">{{ bookDate }}</span>

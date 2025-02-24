@@ -123,8 +123,9 @@ header nav a[aria-current="page"]:hover {
     overflow-y: hidden;
     gap: 15px;
   }
-
+  
   header nav ul.active {
+    padding-top: 20px;
     height: auto;
   }
 }
